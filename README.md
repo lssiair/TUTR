@@ -50,6 +50,15 @@ torch==1.12.1+cu113
 
 torchvision==0.13.1+cu113
 
+## Dataset
+
+Please download the [dataset](https://drive.google.com/drive/folders/1hpXNypqYVz_XnrnJSlcM8ogfQSA7utct?usp=drive_link) and extract it into the directory './dataset/' like this:
+
+```
+./dataset/sdd_train.pkl/
+./dataset/sdd_test.pkl/
+
+
 ## train && evaluation (GPU VERSION)
 
     $ python train.py --dataset_name <dataset_name> --hp_config <config_file> --gpu <sdd_index>
