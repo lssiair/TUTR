@@ -1,0 +1,5 @@
+python=3.7.12=hf930737_100_cpython
+numpy==1.19.0
+scikit-learn==1.0.2
+torch==1.12.1+cu113
+torchvision==0.13.1+cu113
