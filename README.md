@@ -16,7 +16,7 @@ _**Abstract**_ -- Pedestrian trajectory prediction is an essential link to under
 
 
 ## framework
-    TUTR employs an encoder-decoder transformer architecture to forecast future motion behaviors.Firstly, the global prediction generates general motion modes.Then, the general motion modes concatenated with the observed embedding are considered as the input tokens of a mode-level transformer encoder.Subsequently, the encoder output attends to the social interactions by a social-level decoder.Finally, two shared prediction heads in dual prediction are used to obtain the dual results, predicted trajectories and corresponding probabilities.
+TUTR employs an encoder-decoder transformer architecture to forecast future motion behaviors.Firstly, the global prediction generates general motion modes.Then, the general motion modes concatenated with the observed embedding are considered as the input tokens of a mode-level transformer encoder.Subsequently, the encoder output attends to the social interactions by a social-level decoder.Finally, two shared prediction heads in dual prediction are used to obtain the dual results, predicted trajectories and corresponding probabilities.
 
 ![](gallery/framework.png)
 
