@@ -65,3 +65,6 @@ Example for the ETH-UCY and dataset :
 
 ## Acknowledgement
 The pre-processsed dataset are obtained from the dataloader of [[SocialVAE](https://github.com/xupei0610/SocialVAE)] .
+
+## License
+This repository is licensed under Apache 2.0.
