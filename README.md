@@ -20,7 +20,7 @@ TUTR employs an encoder-decoder transformer architecture to forecast future moti
 
 ![](gallery/framework.png)
 
-## peroformance & speed
+## performance & speed
 TUTR achieves a balance between accuracy and inference speed. 
 
 ![](gallery/fig1_1.PNG) 
