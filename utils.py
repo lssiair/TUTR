@@ -4,6 +4,9 @@ from sklearn.cluster import KMeans
 import os
 import pickle
 
+import torch
+import random
+
 def translation(seq, refer_point_index):  # rigid transformation
     # seq [N T 2]
     return seq - seq[:, refer_point_index:refer_point_index+1]
@@ -138,3 +141,23 @@ def saving_motion_modes(dataloader, motion_modes, obs_len, dataset_path, dataset
     np.save(dataset_path+dataset_name+'_motion_modes.npy', motion_modes)
     np.save(dataset_path+dataset_name+'_closest_mode_indices.npy', closest_mode_indices_array)
     np.save(dataset_path+dataset_name+'_cls_soft_label.npy', cls_soft_label_array)
+
+
+def seed(seed: int):
+    rand = seed is None
+    if seed is None:
+        seed = int.from_bytes(os.urandom(4), byteorder="big")
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.manual_seed(seed)
+    torch.backends.cudnn.deterministic = not rand
+    torch.backends.cudnn.benchmark = rand
+
+
+def get_rng_state(device):
+    return (
+        torch.get_rng_state(), 
+        torch.cuda.get_rng_state(device) if torch.cuda.is_available and "cuda" in str(device) else None,
+        np.random.get_state(),
+        random.getstate(),
+        )
