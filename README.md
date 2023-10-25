@@ -72,8 +72,12 @@ Example for the ETH-UCY and dataset :
     python train.py --dataset_name zara1 --hp_config config/zara1.py --gpu 0
     python train.py --dataset_name zara2 --hp_config config/zara2.py --gpu 0
 
-## Acknowledgement
-The pre-processsed dataset are obtained from the dataloader of [[SocialVAE](https://github.com/xupei0610/SocialVAE)] .
 
+## Acknowledgement
+The pre-processsed dataset are obtained from the dataloader of [[SocialVAE](https://github.com/xupei0610/SocialVAE)].
+You can generate pkl dataset by the below command:
+    python get_data_pkl.py --train data/eth/train --test data/eth/test --config config/eth.py
+
+    
 ## License
 This repository is licensed under Apache 2.0.
