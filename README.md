@@ -74,13 +74,13 @@ Example for the ETH-UCY and dataset :
 
 
 ## Acknowledgement
-The pre-processsed dataset are obtained from the dataloader of [[SocialVAE](https://github.com/xupei0610/SocialVAE)].
+The pre-processed datasets are obtained from the dataloader of [[SocialVAE](https://github.com/xupei0610/SocialVAE)].
 
-You can generate pkl dataset like this:
+You can generate pkl-dataset like this:
 
     python get_data_pkl.py --train data/eth/train --test data/eth/test --config config/eth.py
 
-Other dataset can modify the <eth> to corresponding name, such as:
+Other datasets can be obtained to modify the corresponding dataset names, such as:
 
      python get_data_pkl.py --train data/sdd/train --test data/sdd/test --config config/sdd.py
 
