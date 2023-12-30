@@ -96,8 +96,10 @@ class Dataloader(torch.utils.data.Dataset):
                 ))
         self.data = np.array(data, dtype=object)
         print("\n   {} trajectories loaded.".format(len(self.data)))
-
-        save_path_file = dataset_name + '_' + dataset_type +  '.pkl'
+        save_file = './dataset/'
+        if not os.path.exist(save_file):
+            os.mkdirs(save_file)
+        save_path_file = save_file + dataset_name + '_' + dataset_type +  '.pkl'
         f = open(save_path_file, 'wb')
         pickle.dump(data, f)
         f.close()
